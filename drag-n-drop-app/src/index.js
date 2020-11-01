@@ -1,7 +1,6 @@
 import React from 'react';
 import './index.css';
 import { render } from 'react-dom';
-import { Navbar } from 'react-bootstrap';
 import { Stage, Layer, Image } from 'react-konva';
 import apple from './apple.png';
 import orange from './orange.png';
@@ -31,11 +30,12 @@ const App = () => {
   const [images, setImages] = React.useState([]); 
   return (
     <>
-    <Navbar bg="light" className="text-center">
-      <Navbar.Brand href="#home">Drag 'n Drop</Navbar.Brand>
-    </Navbar>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet"></link>
+    <div style={{padding: 10, backgroundColor: "lavenderblush", fontFamily: 'Crimson Text, serif'}}>
+      <h1 className="text-center">Fruit Drag 'n Drop</h1>
+    </div>
     
-    <div>
+    <div className="text-center">
       <br />
       <img
           alt="apple"
@@ -122,7 +122,7 @@ const App = () => {
         <Stage
           width = { window.innerWidth }
           height = { window.innerHeight }
-          style = {{ border: '2px solid grey' }}
+          style = {{ border: '1px solid grey', background: 'linear-gradient(to right, #ffefba, #ffffff)'}}
           ref = { stageRef }
           >
             <Layer>
